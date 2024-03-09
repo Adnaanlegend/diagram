@@ -1,6 +1,7 @@
+import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
 import Image from "next/image";
 
-function Header  (){
+function Header() {
   return (
     <div>
       <header className="bg-black">
@@ -75,7 +76,7 @@ function Header  (){
                   className="rounded-md px-5 py-2.5 text-sm font-medium text-white shadow"
                   href="#"
                 >
-                  Login
+                  <LoginLink postLoginRedirectURL="/dashboard">Login</LoginLink>
                 </a>
 
                 <div className="hidden sm:flex">
@@ -83,7 +84,7 @@ function Header  (){
                     className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium "
                     href="#"
                   >
-                    Register
+                    <RegisterLink>Register</RegisterLink>
                   </a>
                 </div>
               </div>
@@ -112,6 +113,6 @@ function Header  (){
       </header>
     </div>
   );
-};
+}
 
 export default Header;
