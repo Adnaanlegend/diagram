@@ -16,8 +16,8 @@ function Hero() {
           </h1>
 
           <p className="mx-auto mt-8 max-w-xl sm:text-xl/relaxed">
-            Create design, Write User Stories , Collaborative canvas and
-            diagram-as-code builder!
+            Create design, Write User Stories , Whiteboard and <br />
+            Diagram-as-code builder!
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">

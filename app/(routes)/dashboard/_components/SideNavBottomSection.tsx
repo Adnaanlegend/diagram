@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 
-function SideNavBottomSection({ onFileCreate }: any) {
+function SideNavBottomSection({ onFileCreate, totalFiles }: any) {
   const menuList = [
     {
       id: 1,
@@ -86,11 +86,16 @@ function SideNavBottomSection({ onFileCreate }: any) {
       {/* Progress Bar   */}
 
       <div className="h-4 w-full bg-gray-100 rounded-full mt-5 ">
-        <div className="h-4 w-[40%] bg-blue-600 rounded-full mt-5 "></div>
+        <div
+          className={`h-4 
+          
+           bg-blue-600 rounded-full mt-5`}
+           style={{ width: `${(totalFiles / 5) * 100}%`}}
+        ></div>
       </div>
 
       <h2 className="text-[12px] mt-3">
-        <strong>1</strong> out of <strong>5</strong> files used
+        <strong>{totalFiles}</strong> out of <strong>5</strong> files used
       </h2>
       <h2 className="text-[12px] mt-1">
         Upgrade your plan for Unlimited Access
