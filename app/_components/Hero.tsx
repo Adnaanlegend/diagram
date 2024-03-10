@@ -12,11 +12,12 @@ function Hero() {
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
             Documents and Diagrams
-            <span className="sm:block"> for engineering teams. </span>
+            <span className="sm:block "> for engineering teams. </span>
           </h1>
 
           <p className="mx-auto mt-8 max-w-xl sm:text-xl/relaxed">
-            Create design, Write User Stories , Collaborative canvas and diagram-as-code builder!
+            Create design, Write User Stories , Collaborative canvas and
+            diagram-as-code builder!
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
