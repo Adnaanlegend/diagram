@@ -69,7 +69,7 @@ function SideNavTopSection({ user, setActiveTeamInfo }: any) {
         <PopoverTrigger>
           <div className="flex items-center gap-3 hover:bg-slate-200 p-1 rounded-lg cursor-pointer">
             <Image src="/reshot.svg" alt="logo" width={60} height={60} />
-            <h2 className="flex gap-2 items-center font-bold text-[17px]">
+            <h2 className="flex gap-2 items-center font-bold text-[15px]">
               {activeTeam?.teamName}
               <ChevronDown />
             </h2>
