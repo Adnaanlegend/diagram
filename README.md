@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Title of the project ---> Diagram
 
-## Getting Started
+Launch Date- 1/04/2024
 
-First, run the development server:
+Technology Stack ---> NextJS as a Framework, Kinde for Authentication , Convex for Database and ... Register to explore more
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Below are the Attached Screenshots and a Video for your reference.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Landing Page -->
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Landing Page](https://github.com/Adnaanlegend/diagram/assets/92253624/bbd139c5-f39a-48d9-ace3-31830acf44b2)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Authentication Screen -->
 
-## Learn More
+![Auth Screen](https://github.com/Adnaanlegend/diagram/assets/92253624/aa8fd3db-2738-4f2a-bf4e-0ddc82aac507)
 
-To learn more about Next.js, take a look at the following resources:
+Dashboard Screen --> 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Dashboard ](https://github.com/Adnaanlegend/diagram/assets/92253624/b446c9ab-6ef9-4265-b91a-70510df951b9)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+How to --> 
+ 
+https://www.youtube.com/watch?v=n0_vkZjHDJ0
 
-## Deploy on Vercel
+Workspace --> 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+No picture because I want you all to see it. Go on Register.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Dashboard after Files - 
+
+![Dashboard After File creation](https://github.com/Adnaanlegend/diagram/assets/92253624/d5f4e8a0-6d84-49a1-80cc-acecf3467da1)
+
+This Application is Mobile Responsive because for Important Tasks , You need your Laptop. 
+
+I will be rolling out more features based on the responses i get.
+
+Please Star the Repository. It would mean a lot to me. 
