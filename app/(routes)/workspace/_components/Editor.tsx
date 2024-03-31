@@ -14,33 +14,55 @@ import Paragraph from "@editorjs/paragraph";
 import Warning from "@editorjs/warning";
 //@ts-ignore
 import ToggleBlock from "editorjs-toggle-block";
+import { useMutation } from "convex/react";
+import { api } from "@/convex/_generated/api";
+import { toast } from "sonner";
+import { FILE } from "../../dashboard/_components/FileList";
 
 const rawDocument = {
-    "time" : 1550476186479,
-    "blocks" : [{
-        data:{
-            text:'Document Name',
-            level:2
-        },
-        id: "123",
-        type:'header'
+  time: 1550476186479,
+  blocks: [
+    {
+      data: {
+        text: "Document Name",
+        level: 2,
+      },
+      id: "123",
+      type: "header",
     },
     {
-        data:{
-            level:4
-        },
-        id: "1234",
-        type:'header'
-    }],
-    "version" : "2.8.1"
-}
+      data: {
+        level: 4,
+      },
+      id: "1234",
+      type: "header",
+    },
+  ],
+  version: "2.8.1",
+};
 
-function Editor() {
+function Editor({
+  onSaveTrigger,
+  fileId,
+  fileData,
+}: {
+  onSaveTrigger: any;
+  fileId: any;
+  fileData: FILE;
+}) {
   const ref = useRef<EditorJS>();
-  const [document, setDocument]= useState(rawDocument);
+  const updateDocument = useMutation(api.files.updateDocument);
+  const [document, setDocument] = useState(rawDocument);
+
   useEffect(() => {
-    initEditor();
-  });
+    fileData && initEditor();
+  }, [fileData]);
+
+  useEffect(() => {
+    console.log("Trigger Value");
+    onSaveTrigger && onSaveDocument();
+  }, [onSaveTrigger]);
+
   const initEditor = () => {
     const editor = new EditorJS({
       /**
@@ -87,10 +109,35 @@ function Editor() {
         },
       },
       holder: "editorjs",
-      data:document
+      data: fileData?.document ? JSON.parse(fileData.document) : rawDocument,
     });
     ref.current = editor;
   };
+
+  const onSaveDocument = () => {
+    if (ref.current) {
+      ref.current
+        .save()
+        .then((outputData) => {
+          console.log("Article data: ", outputData);
+          updateDocument({
+            _id: fileId,
+            document: JSON.stringify(outputData),
+          }).then(
+            (resp) => {
+              toast("Document Updated!");
+            },
+            (e) => {
+              toast("Server is busy, Please try again");
+            }
+          );
+        })
+        .catch((error) => {
+          console.log("Saving failed: ", error);
+        });
+    }
+  };
+
   return (
     <div>
       <div id="editorjs" className="ml-20"></div>

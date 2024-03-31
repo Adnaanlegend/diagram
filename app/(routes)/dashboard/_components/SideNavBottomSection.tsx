@@ -12,27 +12,29 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
+import Constant from "@/app/_constant/Constant";
+import NewFeatures from "./NewFeatures";
 
 function SideNavBottomSection({ onFileCreate, totalFiles }: any) {
   const menuList = [
     {
       id: 1,
-      name: "Getting Started",
+      name: "Always free",
       icon: Flag,
       path: "",
     },
     {
       id: 2,
-      name: "Github",
+      name: "Coming soon",
       icon: Github,
       path: "",
     },
-    {
-      id: 3,
-      name: "Archive",
-      icon: Archive,
-      path: "",
-    },
+    // {
+    //   id: 3,
+    //   name: "Archive",
+    //   icon: Archive,
+    //   path: "",
+    // },
   ];
 
   const [fileInput, setFileInput] = useState("");
@@ -57,30 +59,34 @@ function SideNavBottomSection({ onFileCreate, totalFiles }: any) {
             New File
           </Button>
         </DialogTrigger>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Create New File</DialogTitle>
-            <DialogDescription>
-              <Input
-                placeholder="Enter File Name"
-                className=" mt-3"
-                onChange={(e) => setFileInput(e.target.value)}
-              />
-            </DialogDescription>
-          </DialogHeader>
-          <DialogFooter>
-            <DialogClose asChild>
-              <Button
-                type="button"
-                className="bg-blue-600 hover:bg-blue-700"
-                disabled={!(fileInput && fileInput.length >= 3)}
-                onClick={() => onFileCreate(fileInput)}
-              >
-                Create
-              </Button>
-            </DialogClose>
-          </DialogFooter>
-        </DialogContent>
+        {totalFiles < Constant.MAX_FREE_FILE ? (
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Create New File</DialogTitle>
+              <DialogDescription>
+                <Input
+                  placeholder="Enter File Name"
+                  className=" mt-3"
+                  onChange={(e) => setFileInput(e.target.value)}
+                />
+              </DialogDescription>
+            </DialogHeader>
+            <DialogFooter>
+              <DialogClose asChild>
+                <Button
+                  type="button"
+                  className="bg-blue-600 hover:bg-blue-700"
+                  disabled={!(fileInput && fileInput.length >= 3)}
+                  onClick={() => onFileCreate(fileInput)}
+                >
+                  Create
+                </Button>
+              </DialogClose>
+            </DialogFooter>
+          </DialogContent>
+        ) : (
+          <NewFeatures />
+        )}
       </Dialog>
 
       {/* Progress Bar   */}
@@ -90,15 +96,33 @@ function SideNavBottomSection({ onFileCreate, totalFiles }: any) {
           className={`h-4 
           
            bg-blue-600 rounded-full mt-5`}
-           style={{ width: `${(totalFiles / 5) * 100}%`}}
+          style={{ width: `${(totalFiles / 5) * 100}%` }}
         ></div>
       </div>
 
       <h2 className="text-[12px] mt-3">
-        <strong>{totalFiles}</strong> out of <strong>5</strong> files used
+        <strong>{totalFiles}</strong> out of{" "}
+        <strong>{Constant.MAX_FREE_FILE}</strong> files used
       </h2>
       <h2 className="text-[12px] mt-1">
-        Upgrade your plan for Unlimited Access
+        {" "}
+        <a
+          className="text-[15px] hover:underline"
+          target="_blank"
+          href="https://github.com/Adnaanlegend/diagram"
+        >
+          Star the Repo
+        </a>
+        <p className="mt-3">
+          {" "}
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/adnaanhussain786/"
+            className="text-[15px] hover:underline"
+          >
+            Made by Adnaan Hussain
+          </a>
+        </p>
       </h2>
     </div>
   );

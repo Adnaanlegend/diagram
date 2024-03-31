@@ -23,11 +23,11 @@ function Header() {
                       href="#"
                     >
                       {" "}
-                      About{" "}
+                      Check it Out --->{" "}
                     </a>
                   </li>
 
-                  <li>
+                  {/* <li>
                     <a
                       className="text-white transition hover:text-gray-100/75"
                       href="#"
@@ -65,7 +65,7 @@ function Header() {
                       {" "}
                       Projects{" "}
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </nav>
             </div>

@@ -21,10 +21,10 @@ function Header() {
           className="rounded-full"
         />
       </div>
-      <Button className="flex gap-2 text-sm h-8 hover:bg-blue-700 bg-blue-600">
+      {/* <Button className="flex gap-2 text-sm h-8 hover:bg-blue-700 bg-blue-600">
         <Send className="h-4 w-4" />
         Invite
-      </Button>
+      </Button> */}
     </div>
   );
 }

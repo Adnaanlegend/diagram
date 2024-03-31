@@ -20,7 +20,7 @@ export interface FILE {
   document: string;
   fileName: string;
   teamId: string;
-  whiteBoard: string;
+  whiteboard: string;
   _id: string;
   _creationTime: number;
 }
@@ -82,7 +82,7 @@ function FileList() {
                       height={30}
                     />
                   </td>
-                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                  {/* <td className="whitespace-nowrap px-4 py-2 text-gray-700">
                     <DropdownMenu>
                       <DropdownMenuTrigger>
                         <MoreHorizontal />
@@ -94,7 +94,7 @@ function FileList() {
                         </DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
-                  </td>
+                  </td> */}
                 </tr>
               ))}
           </tbody>
