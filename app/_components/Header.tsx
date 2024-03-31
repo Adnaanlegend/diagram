@@ -23,7 +23,7 @@ function Header() {
                       href="#"
                     >
                       {" "}
-                      Check it Out --->{" "}
+                      Check it Out{" "}
                     </a>
                   </li>
 

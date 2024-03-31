@@ -1,17 +1,8 @@
 import { FileListContext } from "@/app/_context/FileListContext";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
-import { Archive, MoreHorizontal } from "lucide-react";
 import moment from "moment";
 import Image from "next/image";
 import React, { useContext, useEffect, useState } from "react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { useRouter } from "next/navigation";
 
 export interface FILE {

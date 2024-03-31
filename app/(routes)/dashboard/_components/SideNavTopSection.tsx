@@ -37,7 +37,7 @@ function SideNavTopSection({ user, setActiveTeamInfo }: any) {
 
   const router = useRouter();
   const convex = useConvex();
-  const [activeTeam, setActiveTeam] = useState<TEAM[]>();
+  const [activeTeam, setActiveTeam] = useState<TEAM>();
   const [teamList, setTeamList] = useState<TEAM[]>();
 
   useEffect(() => {
