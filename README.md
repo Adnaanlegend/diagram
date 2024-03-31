@@ -30,8 +30,8 @@ Dashboard after Files -
 
 ![Dashboard After File creation](https://github.com/Adnaanlegend/diagram/assets/92253624/d5f4e8a0-6d84-49a1-80cc-acecf3467da1)
 
-This Application is Mobile Responsive because for Important Tasks , You need your Laptop. 
+This Application is Mobile Responsive because such Important Tasks , You need your Laptop. 
 
-I will be rolling out more features based on the responses i get.
+I will be rolling out more features based on the responses I get.
 
 Please Star the Repository. It would mean a lot to me. 
